@@ -33,9 +33,25 @@ h1, h2 {
 
 .conteudo {
     margin-top: 92px;
-    padding-left: 21px;
+    padding-left: 26px;
+
 }
 
+.itens {
+    padding-top: 25px;
+    height: 261px;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+}
+
+li{
+    background-color: #fff;
+    width: 172px;
+    height: 216px;
+}
 
 .rodape {
     background-color: #fff;
