@@ -30,3 +30,31 @@ h1, h2 {
     color: #fff;
     font-size: 26px;
 }
+
+.conteudo {
+    margin-top: 92px;
+    padding-left: 21px;
+}
+
+
+.rodape {
+    background-color: #fff;
+    height: 92px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape button {
+    height: 61px;
+    width: 88%;
+    border-radius: 50px;
+    background-color: #cbcbcb;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
