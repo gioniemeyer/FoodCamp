@@ -50,7 +50,8 @@ h1, h2 {
 ul {
     display: flex;
     margin-top: 20px;
-    overflow-x: visible;
+    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 li{
