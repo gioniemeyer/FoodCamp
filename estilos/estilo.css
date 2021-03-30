@@ -65,6 +65,12 @@ li:first-child {
     margin-left: 0px;
 }
 
+li img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
 .items:last-child {
     margin-bottom: 110px;
 }
