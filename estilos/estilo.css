@@ -35,7 +35,7 @@ h1, h2 {
 .container {
     margin-top: 92px;
     padding-left: 26px;
-    overflow-x: scroll;
+    overflow-x: visible;
 }
 
 .items {
@@ -46,7 +46,7 @@ h1, h2 {
 ul {
     display: flex;
     margin-top: 20px;
-    overflow-x: scroll;
+    overflow-x: visible;
 }
 
 li{
