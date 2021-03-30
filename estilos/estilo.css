@@ -35,7 +35,7 @@ h1, h2 {
 .container {
     margin-top: 92px;
     padding-left: 26px;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 .items {
