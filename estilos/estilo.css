@@ -19,6 +19,7 @@ h1, h2 {
     flex-direction: column;
     justify-content: center;
     box-shadow: 0 4px 4px rgba(0, 0 ,0, 0.25);
+    z-index: 2;
 }
 
 .header h1 {
@@ -67,6 +68,16 @@ li{
     padding: 15px;
     font-size: 16px;
     box-shadow: 0 0 10px -4px rgba(0, 0 ,0, 0.25);
+    position: relative;
+}
+
+li:hover {
+    width: calc(172px - 12px - 18px);
+    height: calc(216px - 12px - 18px);
+    border: #32B72F 6px solid;
+    padding: 9px;
+    box-sizing: content-box;
+
 }
 
 li:first-child {
@@ -77,6 +88,15 @@ li img {
     width: 144px;
     height: 87px;
     border-radius: 4px;
+}
+
+li ion-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: #32B72F;
+    font-size: 16px;
+    display: none;
 }
 
 .items:last-child {
@@ -101,7 +121,7 @@ li img {
     box-shadow: 0 4px 4px rgba(0, 0 ,0, 0.25);
 }
 
-.footer button {
+.footer .on-hold {
     height: 61px;
     width: 88%;
     border-radius: 50px;
@@ -109,4 +129,16 @@ li img {
     border: none;
     color: #fff;
     font-size: 20px;
+    /* display: none; */
+}
+
+.footer .buying {
+    height: 61px;
+    width: 88%;
+    border-radius: 50px;
+    background-color: #32B72F;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    display: none;
 }
