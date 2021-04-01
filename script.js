@@ -1,7 +1,7 @@
 function PratoEscolhido() {
 
-    const escolhido = document.querySelector(".prato");
-    escolhido.classList.add("green-border");
+    const prato_escolhido = document.querySelector(".prato");
+    prato_escolhido.classList.add("green-border");
 
     const icone = document.querySelector("ion-icon");
     icone.classList.remove("hidden");
@@ -9,20 +9,20 @@ function PratoEscolhido() {
 
 function BebidaEscolhida() {
 
-    const escolhido = document.querySelector(".Bebida");
-    escolhido.classList.add("green-border");
+    const bebida_escolhida = document.querySelector(".Bebida");
+    bebida_escolhida.classList.add("green-border");
 
-    const icone = document.querySelector("ion-icon");
-    icone.classList.remove("hidden");
+    const icone_bebida = document.querySelector(".Bebida ion-icon");
+    icone_bebida.classList.remove("hidden");
 }
 
 function SobremesaEscolhida() {
 
-    const escolhido = document.querySelector(".Sobremesa");
-    escolhido.classList.add("green-border");
+    const sobremesa_escolhida = document.querySelector(".Sobremesa");
+    sobremesa_escolhida.classList.add("green-border");
 
-    const icone = document.querySelector("ion-icon");
-    icone.classList.remove("hidden");
+    const icone_sobremesa = document.querySelector(".Sobremesa ion-icon");
+    icone_sobremesa.classList.remove("hidden");
 }
 
 // function FecharPedido() {
