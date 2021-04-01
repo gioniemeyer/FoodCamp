@@ -1,7 +1,10 @@
-function ajustadoEncodeURIComponent (str) {
-    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-      return '%' + c.charCodeAt(0).toString(16);
-    });
-  }
+function PratoEscolhido() {
 
-  
+    const escolhido = document.querySelector("li");
+    escolhido.classList.add("green-border");
+
+    const icone = document.querySelector("ion-icon");
+    icone.classList.remove("hidden");
+
+}
+
