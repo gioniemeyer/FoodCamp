@@ -1,28 +1,37 @@
-function PratoEscolhido() {
+function PratoEscolhido(classe) {
 
-    const prato_escolhido = document.querySelector(".prato");
-    prato_escolhido.classList.add("green-border");
+    const selecionado = document.querySelector('.Prato .chosen');
 
-    const icone = document.querySelector("ion-icon");
-    icone.classList.remove("hidden");
+    if(selecionado !== null) {
+        selecionado.classList.remove('chosen')
+    }
+
+    const prato_escolhido = document.querySelector(classe);
+    prato_escolhido.classList.add("chosen");
 }
 
-function BebidaEscolhida() {
+function BebidaEscolhida(classe) {
 
-    const bebida_escolhida = document.querySelector(".Bebida");
-    bebida_escolhida.classList.add("green-border");
+    const selecionado = document.querySelector('.Bebida .chosen');
 
-    const icone_bebida = document.querySelector(".Bebida ion-icon");
-    icone_bebida.classList.remove("hidden");
+    if(selecionado !== null) {
+        selecionado.classList.remove('chosen')
+    }
+
+    const bebida_escolhida = document.querySelector(classe);
+    bebida_escolhida.classList.add("chosen");
 }
 
-function SobremesaEscolhida() {
+function SobremesaEscolhida(classe) {
 
-    const sobremesa_escolhida = document.querySelector(".Sobremesa");
-    sobremesa_escolhida.classList.add("green-border");
+    const selecionado = document.querySelector('.Sobremesa .chosen');
 
-    const icone_sobremesa = document.querySelector(".Sobremesa ion-icon");
-    icone_sobremesa.classList.remove("hidden");
+    if(selecionado !== null) {
+        selecionado.classList.remove('chosen')
+    }
+
+    const sobremesa_escolhida = document.querySelector(classe);
+    sobremesa_escolhida.classList.add("chosen");
 }
 
 function FecharPedido() {
