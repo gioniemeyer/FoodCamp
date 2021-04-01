@@ -114,8 +114,12 @@ ul {
 
 a .green-border {
     border: #32B72F 6px solid;
-
 }
+
+span {
+    font-weight: bold;
+}
+
 
 li:first-child {
     margin-left: 0px;

@@ -25,6 +25,6 @@ function SobremesaEscolhida() {
     icone_sobremesa.classList.remove("hidden");
 }
 
-// function FecharPedido() {
-//     const FinalPrice = document.querySelector("price");
-// }
+function FecharPedido() {
+    const FinalPrice = document.querySelector(".prato .chosen") + document.querySelector(".Bebida .chosen") + document.querySelector(".Sobremesa .chosen");
+}
