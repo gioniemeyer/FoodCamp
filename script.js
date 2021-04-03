@@ -55,6 +55,13 @@ function FecharPedido(pratoSelecionado) {
         const BotaoCompra2 = document.querySelector('.on-hold')
         BotaoCompra2.classList.add('hidden')
     }
+}
 
-    // const FinalPrice = document.querySelector(".prato .chosen") + document.querySelector(".Bebida .chosen") + document.querySelector(".Sobremesa .chosen");
+function EfetuarPedido() {
+    const mensagem = 'Olá, gostaria de fazer o pedido: - Prato: ' + pratoSelecionado + ' - Bebida: ' + bebidaSelecionada + ' - Sobremesa: ' + sobremesaSelecionada
+    alert(encodeURIComponent(mensagem));
+    // const linkwpp = document.querySelector('.wpp-pedido');
+    // linkwpp.setAttribute("href", 'https://wa.me/5521979412966?text=' + encodeURIComponent(mensagem));
+    // linkwpp.innerHTML = 'https://wa.me/5521993399575?text=' + encodeURIComponent(mensagem) 
+
 }
