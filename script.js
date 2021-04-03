@@ -59,7 +59,11 @@ function FecharPedido(pratoSelecionado) {
 
 function EfetuarPedido() {
     const mensagem = 'Olá, gostaria de fazer o pedido: - Prato: ' + pratoSelecionado + ' - Bebida: ' + bebidaSelecionada + ' - Sobremesa: ' + sobremesaSelecionada
-    alert(encodeURIComponent(mensagem));
+    // alert(encodeURIComponent(mensagem));
+    const linkwpp = document.querySelector('.wpp-pedido');
+
+    linkwpp.href = 'https://wa.me/5521993399575?text=' + mensagem
+
     // const linkwpp = document.querySelector('.wpp-pedido');
     // linkwpp.setAttribute("href", 'https://wa.me/5521979412966?text=' + encodeURIComponent(mensagem));
     // linkwpp.innerHTML = 'https://wa.me/5521993399575?text=' + encodeURIComponent(mensagem) 
