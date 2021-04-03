@@ -1,39 +1,60 @@
-function PratoEscolhido(classe) {
+let pratoSelecionado = null;
+let bebidaSelecionada = null;
+let sobremesaSelecionada = null;
 
-    const selecionado = document.querySelector('.Prato .chosen');
+function PratoEscolhido(classe, nomePrato) {
+    pratoSelecionado = nomePrato;
 
-    if(selecionado !== null) {
-        selecionado.classList.remove('chosen')
+    const Selecionado = document.querySelector('.Prato .chosen');
+    
+    if(Selecionado !== null) {
+        Selecionado.classList.remove('chosen');
     }
 
-    const prato_escolhido = document.querySelector(classe);
-    prato_escolhido.classList.add("chosen");
+    const pratoEscolhido = document.querySelector(classe);
+    pratoEscolhido.classList.add("chosen");
+
+    FecharPedido()
 }
 
-function BebidaEscolhida(classe) {
+function BebidaEscolhida(classe, nomeBebida) {
+    bebidaSelecionada = nomeBebida;
 
-    const selecionado = document.querySelector('.Bebida .chosen');
+    const Selecionado = document.querySelector('.Bebida .chosen');
 
-    if(selecionado !== null) {
-        selecionado.classList.remove('chosen')
+    if(Selecionado !== null) {
+        Selecionado.classList.remove('chosen');
     }
 
-    const bebida_escolhida = document.querySelector(classe);
-    bebida_escolhida.classList.add("chosen");
+    const bebidasEscolhida = document.querySelector(classe);
+    bebidasEscolhida.classList.add("chosen");
+
+    FecharPedido()
 }
 
-function SobremesaEscolhida(classe) {
+function SobremesaEscolhida(classe, nomeSobremesa) {
+    sobremesaSelecionada = nomeSobremesa;
 
-    const selecionado = document.querySelector('.Sobremesa .chosen');
+    const Selecionado = document.querySelector('.Sobremesa .chosen');
 
-    if(selecionado !== null) {
-        selecionado.classList.remove('chosen')
+    if(Selecionado !== null) {
+        Selecionado.classList.remove('chosen');
     }
 
-    const sobremesa_escolhida = document.querySelector(classe);
-    sobremesa_escolhida.classList.add("chosen");
+    const sobremesaEscolhida = document.querySelector(classe);
+    sobremesaEscolhida.classList.add("chosen");
+
+    FecharPedido()
 }
 
-function FecharPedido() {
-    const FinalPrice = document.querySelector(".prato .chosen") + document.querySelector(".Bebida .chosen") + document.querySelector(".Sobremesa .chosen");
+function FecharPedido(pratoSelecionado) {
+    if(pratoSelecionado !== null && bebidaSelecionada !== null && sobremesaSelecionada !== null) {
+        const BotaoCompra = document.querySelector('.buying');
+        BotaoCompra.classList.remove('hidden');
+
+        const BotaoCompra2 = document.querySelector('.on-hold')
+        BotaoCompra2.classList.add('hidden')
+    }
+
+    // const FinalPrice = document.querySelector(".prato .chosen") + document.querySelector(".Bebida .chosen") + document.querySelector(".Sobremesa .chosen");
 }
