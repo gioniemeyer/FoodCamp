@@ -62,7 +62,7 @@ function ChosenDessert(classe, nomeSobremesa) {
     CloseOrder()
 }
 
-function CloseOrder(Meal) {
+function CloseOrder() {
     if(Meal !== null && Drink !== null && Dessert !== null) {
         const BotaoCompra = document.querySelector('.buying');
         BotaoCompra.classList.remove('hidden');
