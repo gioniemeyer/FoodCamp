@@ -1,12 +1,12 @@
-let pratoSelecionado = null;
-let bebidaSelecionada = null;
-let sobremesaSelecionada = null;
-let precoPrato = 0;
-let precoBebida = 0;
-let precoSobremesa = 0;
+let Meal = null;
+let Drink = null;
+let Dessert = null;
+let MealPrice = 0;
+let DrinkPrice = 0;
+let DessertPrice = 0;
 
-function PratoEscolhido(classe, nomePrato) {
-    pratoSelecionado = nomePrato;
+function ChosenMeal(classe, nomePrato) {
+    Meal = nomePrato;
 
     const Selecionado = document.querySelector('.Prato .chosen');
     
@@ -14,18 +14,18 @@ function PratoEscolhido(classe, nomePrato) {
         Selecionado.classList.remove('chosen');
     }
 
-    const pratoEscolhido = document.querySelector(classe);
-    pratoEscolhido.classList.add("chosen");
+    const ChosenMeal = document.querySelector(classe);
+    ChosenMeal.classList.add("chosen");
 
-    precoPrato = document.querySelector('.Prato .chosen p span').innerHTML;
-    precoPrato = precoPrato.replace(',','.');
-    precoPrato = parseFloat(precoPrato)
+    MealPrice = document.querySelector('.Prato .chosen p span').innerHTML;
+    MealPrice = MealPrice.replace(',','.');
+    MealPrice = parseFloat(MealPrice)
 
-    FecharPedido()
+    CloseOrder()
 }
 
-function BebidaEscolhida(classe, nomeBebida) {
-    bebidaSelecionada = nomeBebida;
+function ChosenDrink(classe, nomeBebida) {
+    Drink = nomeBebida;
 
     const Selecionado = document.querySelector('.Bebida .chosen');
 
@@ -33,18 +33,18 @@ function BebidaEscolhida(classe, nomeBebida) {
         Selecionado.classList.remove('chosen');
     }
 
-    const bebidasEscolhida = document.querySelector(classe);
-    bebidasEscolhida.classList.add("chosen");
+    const ChosenDrink = document.querySelector(classe);
+    ChosenDrink.classList.add("chosen");
 
-    precoBebida = document.querySelector('.Bebida .chosen p span').innerHTML;
-    precoBebida = precoBebida.replace(',','.');
-    precoBebida = parseFloat(precoBebida);
+    DrinkPrice = document.querySelector('.Bebida .chosen p span').innerHTML;
+    DrinkPrice = DrinkPrice.replace(',','.');
+    DrinkPrice = parseFloat(DrinkPrice);
 
-    FecharPedido()
+    CloseOrder()
 }
 
-function SobremesaEscolhida(classe, nomeSobremesa) {
-    sobremesaSelecionada = nomeSobremesa;
+function ChosenDessert(classe, nomeSobremesa) {
+    Dessert = nomeSobremesa;
 
     const Selecionado = document.querySelector('.Sobremesa .chosen');
 
@@ -52,18 +52,18 @@ function SobremesaEscolhida(classe, nomeSobremesa) {
         Selecionado.classList.remove('chosen');
     }
 
-    const sobremesaEscolhida = document.querySelector(classe);
-    sobremesaEscolhida.classList.add("chosen");
+    const ChosenDessert = document.querySelector(classe);
+    ChosenDessert.classList.add("chosen");
 
-    precoSobremesa = document.querySelector('.Sobremesa .chosen p span').innerHTML;
-    precoSobremesa = precoSobremesa.replace(',','.');
-    precoSobremesa = parseFloat(precoSobremesa);
+    DessertPrice = document.querySelector('.Sobremesa .chosen p span').innerHTML;
+    DessertPrice = DessertPrice.replace(',','.');
+    DessertPrice = parseFloat(DessertPrice);
 
-    FecharPedido()
+    CloseOrder()
 }
 
-function FecharPedido(pratoSelecionado) {
-    if(pratoSelecionado !== null && bebidaSelecionada !== null && sobremesaSelecionada !== null) {
+function CloseOrder(Meal) {
+    if(Meal !== null && Drink !== null && Dessert !== null) {
         const BotaoCompra = document.querySelector('.buying');
         BotaoCompra.classList.remove('hidden');
 
@@ -72,12 +72,12 @@ function FecharPedido(pratoSelecionado) {
     }
 }
 
-function EfetuarPedido() {
+function CheckOut() {
 
-    const precoTotal = (precoPrato + precoBebida + precoSobremesa).toFixed(2);
+    const precoTotal = (MealPrice + DrinkPrice + DessertPrice).toFixed(2);
 
-    const mensagem = 'Olá, gostaria de fazer o pedido:\n- Prato: ' + pratoSelecionado + '\n- Bebida: ' + bebidaSelecionada + '\n - Sobremesa: ' + sobremesaSelecionada + '\n Total: R$ ' + precoTotal
+    const mensagem = 'Olá, gostaria de fazer o pedido:\n- Prato: ' + Meal + '\n- Bebida: ' + Drink + '\n - Sobremesa: ' + Dessert + '\n Total: R$ ' + precoTotal
     const linkwpp = document.querySelector('.wpp-pedido');
 
-    linkwpp.href = 'https://wa.me/5521993399575?text=' + encodeURIComponent(mensagem);
+    linkwpp.href = 'https://wa.me/5521979412966?text=' + encodeURIComponent(mensagem);
 }

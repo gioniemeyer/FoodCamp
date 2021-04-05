@@ -34,9 +34,8 @@ h1, h2 {
 }
 
 .container {
-    margin-top: 92px;
+    margin-top: calc(92px + 40px);
     padding-left: 26px;
-    /* overflow: hidden; */
 }
 
 .items {
@@ -44,15 +43,10 @@ h1, h2 {
     font-size: 26px;
 }
 
-.items:first-child() {
-    margin-top: calc(92px + 40px);
-}
-
 ul {
     display: flex;
     margin-top: 20px;
     overflow-x: scroll;
-    /* overflow: hidden; */
 }
 
 li {
