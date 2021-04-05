@@ -76,7 +76,10 @@ function CheckOut() {
 
     const precoTotal = (MealPrice + DrinkPrice + DessertPrice).toFixed(2);
 
-    const mensagem = 'Olá, gostaria de fazer o pedido:\n- Prato: ' + Meal + '\n- Bebida: ' + Drink + '\n - Sobremesa: ' + Dessert + '\n Total: R$ ' + precoTotal
+    const Name = prompt("Olá! Qual seu nome?");
+    const Address = prompt("Ops, esqueci de perguntar seu endereço... Pode me dizer, por gentileza?");
+
+    const mensagem = 'Olá, gostaria de fazer o pedido:\n- Prato: ' + Meal + '\n- Bebida: ' + Drink + '\n - Sobremesa: ' + Dessert + '\n Total: R$ ' + precoTotal + '\n\n Nome: ' + Name + '\n Endereço: ' + Address;
     const linkwpp = document.querySelector('.wpp-pedido');
 
     linkwpp.href = 'https://wa.me/5521979412966?text=' + encodeURIComponent(mensagem);
