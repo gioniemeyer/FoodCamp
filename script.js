@@ -15,7 +15,7 @@ function ChosenMeal(classe, nomePrato) {
     }
 
     const ChosenMeal = document.querySelector(classe);
-    ChosenMeal.classList.add("chosen");
+    ChosenMeal.classList.add,0("chosen");
 
     MealPrice = document.querySelector('.Prato .chosen p span').innerHTML;
     MealPrice = MealPrice.replace(',','.');
@@ -82,5 +82,5 @@ function CheckOut() {
     const mensagem = 'Olá, gostaria de fazer o pedido:\n- Prato: ' + Meal + '\n- Bebida: ' + Drink + '\n - Sobremesa: ' + Dessert + '\n Total: R$ ' + precoTotal + '\n\n Nome: ' + Name + '\n Endereço: ' + Address;
     const linkwpp = document.querySelector('.wpp-pedido');
 
-    linkwpp.href = 'https://wa.me/5521979412966?text=' + encodeURIComponent(mensagem);
+    linkwpp.href = 'https://wa.me/5521999999999?text=' + encodeURIComponent(mensagem);
 }

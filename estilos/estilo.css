@@ -139,3 +139,38 @@ li ion-icon {
 .hidden {
     display: none;
 }
+
+.Confirmation {
+    background-color: #50D074;
+    width: 377px;
+    height: 353px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    padding: 20px;
+    z-index: 3;
+    border-radius: 9px;
+    box-shadow: 0 0 10px 1px rgba(0, 0 ,0, 0.25);
+    display: none;
+}
+
+.Confirmation .Items-Confirm {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Confirmed {
+    background-color: #fff;
+    color: #50D074;
+    border-radius: 100px;
+    width: 329px;
+    height: 52px;
+    border: #fff solid 0px;
+}
+
